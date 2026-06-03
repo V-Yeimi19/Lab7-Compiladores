@@ -17,6 +17,10 @@ return (0)
 
 
 === Iniciando verificación de tipos ===
+Revisión exitosa
+
+=== Iniciando ejecución del programa ===
+Interprete:
+8.5
 
 === STDERR ===
-Error: argumento 1 en llamada a 'addmul': se esperaba 'float', se recibió 'int'.

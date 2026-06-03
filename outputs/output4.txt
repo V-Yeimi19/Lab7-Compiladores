@@ -15,4 +15,4 @@ return (0)
 === Iniciando verificación de tipos ===
 
 === STDERR ===
-Error: función void no puede retornar un valor.
+Error: una función void no debe tener return.

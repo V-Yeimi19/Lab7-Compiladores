@@ -18,4 +18,4 @@ return (0)
 === Iniciando verificación de tipos ===
 
 === STDERR ===
-Error: argumento 1 en llamada a 'comp': se esperaba 'bool', se recibió 'int'.
+Error: tipo de argumento inválido en posición 1 para llamada a 'comp'.

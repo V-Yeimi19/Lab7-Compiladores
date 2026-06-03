@@ -142,7 +142,7 @@ void TypeChecker::visit(AssignStm* stm) {
     Type* varType = env.lookup(stm->id);
     Type* expType = stm->e->accept(this);
     if (!varType->match(expType)) {
-        cerr << "Error: tipos incompatibles en asignación a '" << stm->id <<"'.";
+        cerr << "Error: tipos incompatibles en asignación a '" << stm->id << "'." << endl;
         exit(0);
     }
 }
@@ -152,7 +152,7 @@ void TypeChecker::visit(ReturnStm* stm) {
 
     if (isVoid) {
         if (stm->e != nullptr) {
-            cerr << "Error: función void no puede retornar un valor." << endl;
+            cerr << "Error: una función void no debe tener return." << endl;
             exit(0);
         }
         return;
@@ -165,9 +165,7 @@ void TypeChecker::visit(ReturnStm* stm) {
 
     Type* t = stm->e->accept(this);
     if (!t->match(retornodefuncion)) {
-        cerr << "Error: tipo de retorno incorrecto: se esperaba '"
-             << Type::type_names[retornodefuncion->ttype]
-             << "', se retornó '" << Type::type_names[t->ttype] << "'." << endl;
+        cerr << "Error: retorno distinto al tipo declarado de la función." << endl;
         exit(0);
     }
 }
@@ -272,8 +270,7 @@ Type* TypeChecker::visit(FcallExp* e) {
     size_t expected = fd->Nparametros.size();
     size_t received = e->argumentos.size();
     if (received != expected) {
-        cerr << "Error: llamada a '" << fd->nombre << "': se esperaban "
-             << expected << " argumento(s), se recibieron " << received << "." << endl;
+        cerr << "Error: cantidad de argumentos inválida en llamada a '" << fd->nombre << "'." << endl;
         exit(0);
     }
 
@@ -282,10 +279,10 @@ Type* TypeChecker::visit(FcallExp* e) {
     for (auto arg : e->argumentos) {
         Type* argType = arg->accept(this);
         Type::TType expectedTType = Type::string_to_type(fd->Tparametros[i]);
-        if (argType->ttype != expectedTType) {
-            cerr << "Error: argumento " << (i + 1) << " en llamada a '" << fd->nombre
-                 << "': se esperaba '" << fd->Tparametros[i]
-                 << "', se recibió '" << Type::type_names[argType->ttype] << "'." << endl;
+        bool coercionOk = (expectedTType == Type::FLOAT && argType->ttype == Type::INT);
+        if (argType->ttype != expectedTType && !coercionOk) {
+            cerr << "Error: tipo de argumento inválido en posición " << (i + 1)
+                 << " para llamada a '" << fd->nombre << "'." << endl;
             exit(0);
         }
         i++;

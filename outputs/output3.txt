@@ -14,4 +14,4 @@ return (0)
 === Iniciando verificación de tipos ===
 
 === STDERR ===
-Error: tipo de retorno incorrecto: se esperaba 'int', se retornó 'float'.
+Error: retorno distinto al tipo declarado de la función.
