@@ -290,10 +290,14 @@ Type* TypeChecker::visit(FcallExp* e) {
         Type* argType = arg->accept(this);
         Type::TType expectedTType = Type::string_to_type(fd->Tparametros[i]);
         if (argType->ttype != expectedTType) {
-            cerr << "Error: argumento " << (i + 1) << " en llamada a '" << fd->nombre
-                 << "': se esperaba '" << fd->Tparametros[i]
-                 << "', se recibió '" << Type::type_names[argType->ttype] << "'." << endl;
-            exit(0);
+            if (expectedTType == Type::FLOAT && argType->ttype == Type::INT) {
+                // Permitido: promoción implícita de int a float
+            } else {
+                cerr << "Error: argumento " << (i + 1) << " en llamada a '" << fd->nombre
+                     << "': se esperaba '" << fd->Tparametros[i]
+                     << "', se recibió '" << Type::type_names[argType->ttype] << "'." << endl;
+                exit(0);
+            }
         }
         i++;
     }

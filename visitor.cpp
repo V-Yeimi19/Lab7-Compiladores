@@ -273,8 +273,13 @@ Value EVALVisitor::visit(FcallExp* fcall) {
 
     FunDec* fd = envfun[fcall->nombre];
     env.add_level();
-    for (size_t i = 0; i < args.size(); ++i)
-        env.add_var(fd->Nparametros[i], args[i]);
+    for (size_t i = 0; i < args.size(); ++i) {
+        if (fd->Tparametros[i] == "float" && args[i].vtype == Value::INT_VAL) {
+            env.add_var(fd->Nparametros[i], Value(static_cast<float>(args[i].ival)));
+        } else {
+            env.add_var(fd->Nparametros[i], args[i]);
+        }
+    }
 
     fd->cuerpo->accept(this);
     env.remove_level();
