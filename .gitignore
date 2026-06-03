@@ -1,0 +1,6 @@
+.claude/
+*.out
+compilador
+*.ghc
+*.o
+*.h.ghc
