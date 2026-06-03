@@ -305,6 +305,5 @@ true
 ## Compilación y ejecución
 
 ```bash
-g++ -std=c++17 -o compilador main.cpp scanner.cpp parser.cpp ast.cpp visitor.cpp TypeChecker.cpp token.cpp
-./compilador <archivo.txt>
+python3 run_all_inputs.py
 ```
