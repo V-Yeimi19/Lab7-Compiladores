@@ -182,9 +182,17 @@ Exp* Parser::parseCE() {
 
 Exp* Parser::parseBE() {
     Exp* l = parseAE();
-    if (match(Token::LE)){
+    if (match(Token::LE) || match(Token::EQ) || match(Token::NE)){
         BinaryOp op;
-        op = LE_OP;
+        if (previous->type == Token::LE){
+            op = LE_OP;
+        }
+        else if (previous->type == Token::EQ){
+            op = EQ_OP;
+        }
+        else{
+            op = NE_OP;
+        }
         Exp* r = parseAE();
         l = new BinaryExp(l, r, op);
     }
