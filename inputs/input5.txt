@@ -1,0 +1,8 @@
+fun int fuc(int a, int b)
+    return(a)
+endfun
+fun int main()
+    var int x;
+    x = fuc(2);
+    return(0)
+endfun

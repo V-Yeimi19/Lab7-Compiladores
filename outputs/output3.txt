@@ -2,16 +2,11 @@
 Parseo exitoso
 
 === Iniciando impresión del programa ===
-var boolr,;
-fun int suma(int, int) {
-var inty,;
-y=a + b
-return y
+fun int badret() {
+return 3.14
 }
 
 fun int main() {
-r=suma(2,3,)
-print(r)
 return 0
 }
 
@@ -19,4 +14,4 @@ return 0
 === Iniciando verificación de tipos ===
 
 === STDERR ===
-Error: tipos incompatibles en asignación a 'r'.
+Error: retorno distinto al tipo declarado de la función.

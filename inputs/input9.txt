@@ -1,0 +1,9 @@
+fun float pwr(float a, float b)
+    return(a ** b)
+endfun
+fun int main()
+    var float r;
+    r = pwr(2.0, 3.0);
+    print(r);
+    return(0)
+endfun

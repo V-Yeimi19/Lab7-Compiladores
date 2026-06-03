@@ -2,22 +2,14 @@
 Parseo exitoso
 
 === Iniciando impresión del programa ===
-var intx,;
-var boolz,;
-fun float suma(float, float) {
-var floaty,;
-y=a + b
-return y
+fun float pwr(float, float) {
+return a ** b
 }
 
 fun int main() {
-var floata,;
-a=suma(3.14,2.71,)
-x=10
-z=true
-print(a)
-print(x)
-print(z)
+var floatr,;
+r=pwr(2,3,)
+print(r)
 return 0
 }
 
@@ -27,8 +19,6 @@ Revisión exitosa
 
 === Iniciando ejecución del programa ===
 Interprete:
-5.85
-10
-true
+8
 
 === STDERR ===

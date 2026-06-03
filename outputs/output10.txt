@@ -2,22 +2,14 @@
 Parseo exitoso
 
 === Iniciando impresión del programa ===
-var intx,;
-var boolz,;
-fun float suma(float, float) {
-var floaty,;
-y=a + b
-return y
+fun float avgmixed(int, float) {
+return a + b / 2
 }
 
 fun int main() {
-var floata,;
-a=suma(3.14,2.71,)
-x=10
-z=true
-print(a)
-print(x)
-print(z)
+var floatr,;
+r=avgmixed(5,3.5,)
+print(r)
 return 0
 }
 
@@ -27,8 +19,6 @@ Revisión exitosa
 
 === Iniciando ejecución del programa ===
 Interprete:
-5.85
-10
-true
+6.75
 
 === STDERR ===

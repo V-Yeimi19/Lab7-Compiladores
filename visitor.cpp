@@ -94,7 +94,7 @@ int PrintVisitor::visit(PrintStm* stm) {
 }
 
 int PrintVisitor::visit(AssignStm* stm) {
-    cout << stm->id << " = ";
+    cout << stm->id << "=";
     stm->e->accept(this);
     cout << endl;
     return 0;
@@ -142,7 +142,6 @@ int PrintVisitor::visit(FunDec* fd) {
     }
     cout << ") ";
     fd->cuerpo->accept(this);
-    cout << "endfun" << endl;
     cout << endl;
     return 0;
 }

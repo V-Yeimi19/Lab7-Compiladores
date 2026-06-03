@@ -1,0 +1,7 @@
+var int x;
+fun void bad()
+    return(0)
+endfun
+fun int main()
+    return(0)
+endfun

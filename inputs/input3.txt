@@ -1,0 +1,6 @@
+fun int badret()
+    return(3.14)
+endfun
+fun int main()
+    return(0)
+endfun

@@ -1,0 +1,26 @@
+Scanner
+
+TOKEN(FUN, "fun")
+TOKEN(ID, "int")
+TOKEN(ID, "badret")
+TOKEN(LPAREN, "(")
+TOKEN(RPAREN, ")")
+TOKEN(RETURN, "return")
+TOKEN(LPAREN, "(")
+TOKEN(NUM, "3.14")
+TOKEN(RPAREN, ")")
+TOKEN(ENDFUN, "endfun")
+TOKEN(FUN, "fun")
+TOKEN(ID, "int")
+TOKEN(ID, "main")
+TOKEN(LPAREN, "(")
+TOKEN(RPAREN, ")")
+TOKEN(RETURN, "return")
+TOKEN(LPAREN, "(")
+TOKEN(NUM, "0")
+TOKEN(RPAREN, ")")
+TOKEN(ENDFUN, "endfun")
+TOKEN(END)
+
+Scanner exitoso
+

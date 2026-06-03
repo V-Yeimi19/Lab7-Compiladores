@@ -2,16 +2,15 @@
 Parseo exitoso
 
 === Iniciando impresión del programa ===
-var boolr,;
-fun int suma(int, int) {
-var inty,;
-y=a + b
-return y
+fun bool comp(bool) {
+return a
 }
 
 fun int main() {
-r=suma(2,3,)
-print(r)
+var intx,;
+var boolb,;
+x=1
+b=comp(x,)
 return 0
 }
 
@@ -19,4 +18,4 @@ return 0
 === Iniciando verificación de tipos ===
 
 === STDERR ===
-Error: tipos incompatibles en asignación a 'r'.
+Error: tipo de argumento inválido en posición 1 para llamada a 'comp'.

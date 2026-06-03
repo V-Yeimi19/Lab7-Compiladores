@@ -1,0 +1,9 @@
+fun float avgmixed(int a, float b)
+    return(a + b / 2.0)
+endfun
+fun int main()
+    var float r;
+    r = avgmixed(5, 3.5);
+    print(r);
+    return(0)
+endfun

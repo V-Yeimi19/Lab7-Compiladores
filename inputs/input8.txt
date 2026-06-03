@@ -1,0 +1,14 @@
+fun float scale(float x)
+    return(x * 2.0)
+endfun
+fun float combine(float a, float b)
+    var float s;
+    s = scale(a) + scale(b);
+    return(s)
+endfun
+fun int main()
+    var float v;
+    v = combine(1, 2.5);
+    print(v);
+    return(0)
+endfun

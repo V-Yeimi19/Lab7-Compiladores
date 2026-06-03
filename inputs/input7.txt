@@ -1,0 +1,11 @@
+fun float addmul(float a, float b)
+    var float t;
+    t = a * b + 1.5;
+    return(t)
+endfun
+fun int main()
+    var float r;
+    r = addmul(2,3.5);
+    print(r);
+    return(0)
+endfun

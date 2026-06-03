@@ -1,12 +1,17 @@
-var int x,z;
-fun bool suma(int a, int b)
-    var int y;
+var int x;
+var bool z;
+fun float suma(float a, float b)
+    var float y;
     y = a + b;
     return(y)
 endfun
 fun int main()
-    var bool a;
-    a = suma(2,3);
-    print(a);
+    var float a;
+    a = suma(3.14,2.71);
+    x = 10;
+    z = true;
+    print(a); 
+    print(x);
+    print(z);
     return(0)
 endfun
