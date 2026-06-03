@@ -3,4 +3,5 @@
 compilador
 *.ghc
 *.o
+*.h.gch
 *.h.ghc

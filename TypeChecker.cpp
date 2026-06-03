@@ -233,9 +233,29 @@ Type* TypeChecker::visit(BinaryExp* e) {
             }
             return boolType;
 
+        case EQ_OP:
+        case NE_OP: {
+            bool leftNumeric = left->match(intType) || left->match(floatType);
+            bool rightNumeric = right->match(intType) || right->match(floatType);
+            bool bothNumeric = leftNumeric && rightNumeric;
+            bool bothBool = left->match(boolType) && right->match(boolType);
+            if (!(bothNumeric || bothBool)) {
+                cerr << "Error: operadores '==' y '!=' requieren operandos numéricos (int/float) o bool con bool." << endl;
+                exit(0);
+            }
+            return boolType;
+        }
+
         case AND_OP:
             if (!(left->match(boolType) && right->match(boolType))) {
                 cerr << "Error: operador 'and' requiere operandos bool." << endl;
+                exit(0);
+            }
+            return boolType;
+
+        case OR_OP:
+            if (!(left->match(boolType) && right->match(boolType))) {
+                cerr << "Error: operador 'or' requiere operandos bool." << endl;
                 exit(0);
             }
             return boolType;
