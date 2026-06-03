@@ -1,0 +1,26 @@
+=== STDOUT ===
+Parseo exitoso
+
+=== Iniciando impresión del programa ===
+fun float addmul(float, float) {
+var floatt,;
+t=a * b + 1.5
+return t
+}
+
+fun int main() {
+var floatr,;
+r=addmul(2,3.5,)
+print(r)
+return 0
+}
+
+
+=== Iniciando verificación de tipos ===
+Revisión exitosa
+
+=== Iniciando ejecución del programa ===
+Interprete:
+8.5
+
+=== STDERR ===

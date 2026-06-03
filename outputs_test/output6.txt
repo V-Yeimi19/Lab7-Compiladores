@@ -1,0 +1,21 @@
+=== STDOUT ===
+Parseo exitoso
+
+=== Iniciando impresión del programa ===
+fun bool comp(bool) {
+return a
+}
+
+fun int main() {
+var intx,;
+var boolb,;
+x=1
+b=comp(x,)
+return 0
+}
+
+
+=== Iniciando verificación de tipos ===
+
+=== STDERR ===
+Error: tipo de argumento inválido en posición 1 para llamada a 'comp'.

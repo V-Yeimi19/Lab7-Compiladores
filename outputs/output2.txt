@@ -2,21 +2,21 @@
 Parseo exitoso
 
 === Iniciando impresión del programa ===
-var boolr,;
-fun int suma(int, int) {
-var inty,;
+var bool r,
+fun int suma(int a, int b) {
+var int y,
 y=a + b
-return y
+return (y)
 }
 
 fun int main() {
 r=suma(2,3,)
 print(r)
-return 0
+return (0)
 }
 
 
 === Iniciando verificación de tipos ===
 
 === STDERR ===
-Error: tipos incompatibles en asignación a 'r'.
+Error: tipos incompatibles en asignación a 'r': se esperaba 'bool', se recibió 'int'.

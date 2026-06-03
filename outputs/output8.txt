@@ -2,29 +2,25 @@
 Parseo exitoso
 
 === Iniciando impresión del programa ===
-fun float scale(float) {
-return x * 2
+fun float scale(float x) {
+return (x * 2)
 }
 
-fun float combine(float, float) {
-var floats,;
+fun float combine(float a, float b) {
+var float s,
 s=scale(a,) + scale(b,)
-return s
+return (s)
 }
 
 fun int main() {
-var floatv,;
+var float v,
 v=combine(1,2.5,)
 print(v)
-return 0
+return (0)
 }
 
 
 === Iniciando verificación de tipos ===
-Revisión exitosa
-
-=== Iniciando ejecución del programa ===
-Interprete:
-7
 
 === STDERR ===
+Error: argumento 1 en llamada a 'combine': se esperaba 'float', se recibió 'int'.

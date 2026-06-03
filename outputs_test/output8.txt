@@ -1,0 +1,30 @@
+=== STDOUT ===
+Parseo exitoso
+
+=== Iniciando impresión del programa ===
+fun float scale(float) {
+return x * 2
+}
+
+fun float combine(float, float) {
+var floats,;
+s=scale(a,) + scale(b,)
+return s
+}
+
+fun int main() {
+var floatv,;
+v=combine(1,2.5,)
+print(v)
+return 0
+}
+
+
+=== Iniciando verificación de tipos ===
+Revisión exitosa
+
+=== Iniciando ejecución del programa ===
+Interprete:
+7
+
+=== STDERR ===

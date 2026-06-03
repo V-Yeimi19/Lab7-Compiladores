@@ -2,25 +2,21 @@
 Parseo exitoso
 
 === Iniciando impresión del programa ===
-fun float addmul(float, float) {
-var floatt,;
+fun float addmul(float a, float b) {
+var float t,
 t=a * b + 1.5
-return t
+return (t)
 }
 
 fun int main() {
-var floatr,;
+var float r,
 r=addmul(2,3.5,)
 print(r)
-return 0
+return (0)
 }
 
 
 === Iniciando verificación de tipos ===
-Revisión exitosa
-
-=== Iniciando ejecución del programa ===
-Interprete:
-8.5
 
 === STDERR ===
+Error: argumento 1 en llamada a 'addmul': se esperaba 'float', se recibió 'int'.

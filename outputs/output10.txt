@@ -2,23 +2,19 @@
 Parseo exitoso
 
 === Iniciando impresión del programa ===
-fun float avgmixed(int, float) {
-return a + b / 2
+fun float avgmixed(int a, float b) {
+return (a + b / 2)
 }
 
 fun int main() {
-var floatr,;
+var float r,
 r=avgmixed(5,3.5,)
 print(r)
-return 0
+return (0)
 }
 
 
 === Iniciando verificación de tipos ===
-Revisión exitosa
-
-=== Iniciando ejecución del programa ===
-Interprete:
-6.75
 
 === STDERR ===
+Error: operación aritmética requiere operandos del mismo tipo numérico (int o float).

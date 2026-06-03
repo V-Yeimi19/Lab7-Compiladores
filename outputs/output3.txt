@@ -3,15 +3,15 @@ Parseo exitoso
 
 === Iniciando impresión del programa ===
 fun int badret() {
-return 3.14
+return (3.14)
 }
 
 fun int main() {
-return 0
+return (0)
 }
 
 
 === Iniciando verificación de tipos ===
 
 === STDERR ===
-Error: retorno distinto al tipo declarado de la función.
+Error: tipo de retorno incorrecto: se esperaba 'int', se retornó 'float'.

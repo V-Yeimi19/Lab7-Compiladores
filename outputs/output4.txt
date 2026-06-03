@@ -2,17 +2,17 @@
 Parseo exitoso
 
 === Iniciando impresión del programa ===
-var intx,;
+var int x,
 fun void bad() {
-return 0
+return (0)
 }
 
 fun int main() {
-return 0
+return (0)
 }
 
 
 === Iniciando verificación de tipos ===
 
 === STDERR ===
-Error: una función void no debe tener return.
+Error: función void no puede retornar un valor.

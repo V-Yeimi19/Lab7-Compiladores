@@ -2,18 +2,18 @@
 Parseo exitoso
 
 === Iniciando impresión del programa ===
-fun int fuc(int, int) {
-return a
+fun int fuc(int a, int b) {
+return (a)
 }
 
 fun int main() {
-var intx,;
+var int x,
 x=fuc(2,)
-return 0
+return (0)
 }
 
 
 === Iniciando verificación de tipos ===
 
 === STDERR ===
-Error: cantidad de argumentos inválida en llamada a 'fuc'.
+Error: llamada a 'fuc': se esperaban 2 argumento(s), se recibieron 1.

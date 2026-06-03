@@ -1,0 +1,24 @@
+=== STDOUT ===
+Parseo exitoso
+
+=== Iniciando impresión del programa ===
+fun float pwr(float, float) {
+return a ** b
+}
+
+fun int main() {
+var floatr,;
+r=pwr(2,3,)
+print(r)
+return 0
+}
+
+
+=== Iniciando verificación de tipos ===
+Revisión exitosa
+
+=== Iniciando ejecución del programa ===
+Interprete:
+8
+
+=== STDERR ===
