@@ -210,6 +210,13 @@ Type* TypeChecker::visit(BinaryExp* e) {
             }
             return boolType;
 
+        case OR_OP:
+            if (!(left->match(boolType) && right->match(boolType))) {
+                cerr << "Error: operador 'or' requiere operandos bool." << endl;
+                exit(0);
+            }
+            return boolType;
+
         default:
             cerr << "Error: operador binario no soportado." << endl;
             exit(0);

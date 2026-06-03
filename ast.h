@@ -23,6 +23,7 @@ enum BinaryOp {
     DIV_OP,
     LE_OP,
     AND_OP,
+    OR_OP,
     POW_OP
 };
 
