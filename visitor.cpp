@@ -219,6 +219,20 @@ Value EVALVisitor::visit(BinaryExp* exp) {
                 return Value((bool)(toFloat(v1) < toFloat(v2)));
             return Value((bool)(v1.ival < v2.ival));
 
+        case EQ_OP:
+            if (v1.vtype == Value::BOOL_VAL && v2.vtype == Value::BOOL_VAL)
+                return Value((bool)(v1.bval == v2.bval));
+            if (v1.vtype == Value::FLOAT_VAL || v2.vtype == Value::FLOAT_VAL)
+                return Value((bool)(toFloat(v1) == toFloat(v2)));
+            return Value((bool)(v1.ival == v2.ival));
+
+        case NE_OP:
+            if (v1.vtype == Value::BOOL_VAL && v2.vtype == Value::BOOL_VAL)
+                return Value((bool)(v1.bval != v2.bval));
+            if (v1.vtype == Value::FLOAT_VAL || v2.vtype == Value::FLOAT_VAL)
+                return Value((bool)(toFloat(v1) != toFloat(v2)));
+            return Value((bool)(v1.ival != v2.ival));
+
         case AND_OP:
             return Value((bool)(v1.bval && v2.bval));
 

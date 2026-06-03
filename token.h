@@ -29,8 +29,10 @@ public:
         FALSE,
         VAR,
         LE,
+        EQ,
+        NE,
         AND,
-        SEMICOL,    
+        SEMICOL,
         ASSIGN,
         PRINT,
         END      // Fin de entrada

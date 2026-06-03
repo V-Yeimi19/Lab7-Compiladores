@@ -43,6 +43,8 @@ ostream& operator<<(ostream& outs, const Token& tok) {
         case Token::COMA:    outs << "TOKEN(COMA, \""    << tok.text << "\")"; break;
         case Token::VAR:    outs << "TOKEN(VAR, \""    << tok.text << "\")"; break;
         case Token::LE:    outs << "TOKEN(LE, \""    << tok.text << "\")"; break;
+        case Token::EQ:    outs << "TOKEN(EQ, \""    << tok.text << "\")"; break;
+        case Token::NE:    outs << "TOKEN(NE, \""    << tok.text << "\")"; break;
         case Token::AND:    outs << "TOKEN(AND, \""    << tok.text << "\")"; break;
         case Token::TRUE:    outs << "TOKEN(TRUE, \""    << tok.text << "\")"; break;
         case Token::FALSE:    outs << "TOKEN(FALSE, \""    << tok.text << "\")"; break;                    

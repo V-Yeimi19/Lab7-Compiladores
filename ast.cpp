@@ -14,8 +14,10 @@ string Exp::binopToChar(BinaryOp op) {
         case DIV_OP:   return "/";
         case POW_OP:   return "**";
         case LE_OP:   return "<";
+        case EQ_OP:   return "==";
+        case NE_OP:   return "!=";
         case AND_OP:   return "and";
-        case OR_OP: return "or";
+        case OR_OP:    return "or";
         default:       return "?";
     }
 }
