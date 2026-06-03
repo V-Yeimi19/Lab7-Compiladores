@@ -19,4 +19,4 @@ return (0)
 === Iniciando verificación de tipos ===
 
 === STDERR ===
-Error: tipos incompatibles en asignación a 'r': se esperaba 'bool', se recibió 'int'.
+Error: tipos incompatibles en asignación a 'r'.

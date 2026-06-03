@@ -15,6 +15,10 @@ return (0)
 
 
 === Iniciando verificación de tipos ===
+Revisión exitosa
+
+=== Iniciando ejecución del programa ===
+Interprete:
+6.75
 
 === STDERR ===
-Error: operación aritmética requiere operandos del mismo tipo numérico (int o float).

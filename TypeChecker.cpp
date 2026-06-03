@@ -142,9 +142,7 @@ void TypeChecker::visit(AssignStm* stm) {
     Type* varType = env.lookup(stm->id);
     Type* expType = stm->e->accept(this);
     if (!varType->match(expType)) {
-        cerr << "Error: tipos incompatibles en asignación a '" << stm->id
-             << "': se esperaba '" << Type::type_names[varType->ttype]
-             << "', se recibió '" << Type::type_names[expType->ttype] << "'." << endl;
+        cerr << "Error: tipos incompatibles en asignación a '" << stm->id <<"'.";
         exit(0);
     }
 }
@@ -184,15 +182,49 @@ Type* TypeChecker::visit(BinaryExp* e) {
 
     switch (e->op) {
         case PLUS_OP:
+            if (left->match(intType) && right->match(intType))
+                return intType;
+            if (left->match(floatType) && right->match(floatType))
+                return floatType;
+            if ((left->match(intType) && right->match(floatType)) ||
+                (left->match(floatType) && right->match(intType)))
+                return floatType;
+            exit(0);
         case MINUS_OP:
+            if (left->match(intType) && right->match(intType))
+                return intType;
+            if (left->match(floatType) && right->match(floatType))
+                return floatType;
+            if ((left->match(intType) && right->match(floatType)) ||
+                (left->match(floatType) && right->match(intType)))
+                return floatType;
+            exit(0);
         case MUL_OP:
+            if (left->match(intType) && right->match(intType))
+                return intType;
+            if (left->match(floatType) && right->match(floatType))
+                return floatType;
+            if ((left->match(intType) && right->match(floatType)) ||
+                (left->match(floatType) && right->match(intType)))
+                return floatType;
+            exit(0);
         case DIV_OP:
+            if (left->match(intType) && right->match(intType))
+                return intType;
+            if (left->match(floatType) && right->match(floatType))
+                return floatType;
+            if ((left->match(intType) && right->match(floatType)) ||
+                (left->match(floatType) && right->match(intType)))
+                return floatType;
+            exit(0);
         case POW_OP:
             if (left->match(intType) && right->match(intType))
                 return intType;
             if (left->match(floatType) && right->match(floatType))
                 return floatType;
-            cerr << "Error: operación aritmética requiere operandos del mismo tipo numérico (int o float)." << endl;
+            if ((left->match(intType) && right->match(floatType)) ||
+                (left->match(floatType) && right->match(intType)))
+                return floatType;
             exit(0);
 
         case LE_OP:
